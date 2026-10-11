@@ -1,4 +1,5 @@
 import 'package:daily_rise/screens/my_habit.dart';
+import 'package:daily_rise/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'home_screen.dart';
@@ -23,6 +24,7 @@ class _DailyRiseNavigationState extends State<DailyRiseNavigation> {
     HomeScreen(),
     MyHabitsScreen(),
     ProgressScreen(),
+    ProfileSettingsScreen(),
   ];
 
   @override
@@ -62,6 +64,11 @@ class _DailyRiseNavigationState extends State<DailyRiseNavigation> {
                 icon: Icon(Icons.show_chart_rounded),
                 selectedIcon: Icon(Icons.insights_rounded),
                 label: 'Progress',
+              ),
+              NavigationDestination(
+                icon: Icon(Icons.person_outline),
+                selectedIcon: Icon(Icons.person_rounded),
+                label: 'Profile',
               ),
             ],
           ),

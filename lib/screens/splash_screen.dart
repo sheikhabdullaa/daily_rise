@@ -1,4 +1,5 @@
 import 'package:daily_rise/auth/login_screen.dart';
+import 'package:daily_rise/screens/Bottom_sheet_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -27,20 +28,12 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(milliseconds: 1000),
     );
 
-    _fadeAnimation = CurvedAnimation(
-      parent: _controller,
-      curve: Curves.easeIn,
-    );
+    _fadeAnimation = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
 
     _slideAnimation = Tween<Offset>(
       begin: const Offset(0, 0.15),
       end: Offset.zero,
-    ).animate(
-      CurvedAnimation(
-        parent: _controller,
-        curve: Curves.easeOutCubic,
-      ),
-    );
+    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutCubic));
 
     _controller.forward();
     _openNextScreen();
@@ -63,9 +56,7 @@ class _SplashScreenState extends State<SplashScreen>
 
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(
-            builder: (_) => const HomeScreen(),
-          ),
+          MaterialPageRoute(builder: (_) => const DailyRiseNavigation()),
         );
         return;
       }
@@ -77,9 +68,7 @@ class _SplashScreenState extends State<SplashScreen>
 
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(
-        builder: (_) => const LoginScreen(),
-      ),
+      MaterialPageRoute(builder: (_) => const LoginScreen()),
     );
   }
 
@@ -108,10 +97,7 @@ class _SplashScreenState extends State<SplashScreen>
                     decoration: BoxDecoration(
                       color: darkSurface,
                       borderRadius: BorderRadius.circular(32),
-                      border: Border.all(
-                        color: forestGreen,
-                        width: 1.5,
-                      ),
+                      border: Border.all(color: forestGreen, width: 1.5),
                     ),
                     child: const Icon(
                       Icons.wb_twilight_rounded,
@@ -132,10 +118,7 @@ class _SplashScreenState extends State<SplashScreen>
                   const SizedBox(height: 10),
                   const Text(
                     'Rise a Little Every Day.',
-                    style: TextStyle(
-                      color: softSage,
-                      fontSize: 15,
-                    ),
+                    style: TextStyle(color: softSage, fontSize: 15),
                   ),
                   const SizedBox(height: 36),
                   const SizedBox(
