@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572592953754",
+    "project_id": "dailyrise-bc3cb",
+    "storage_bucket": "dailyrise-bc3cb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572592953754:android:fc68ee48dd484cfa128223",
+        "android_client_info": {
+          "package_name": "com.example.daily_rise"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5pDEEcYyrY4iV3KfRSTxo2IliU2gqNio"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
